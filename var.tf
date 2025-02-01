@@ -1,3 +1,10 @@
+variable "region" {
+  description = "default region"
+  type = string
+  default = "us-east-2"
+}
+
+
 variable "bucket" {
   description = "The name of the S3 bucket"
   type        = string
@@ -42,4 +49,30 @@ variable "associate_public_ip_address" {
   type        = bool
   description = "associate ip address value"
    default     = true
+}
+
+
+#vpc variables
+
+variable "vpc_name"{
+    type = string
+    description = "vpc name"
+    default = "ust_vpc"
+} 
+
+variable "rolearn" {
+  type        = string
+  description = "IAM rolearn"
+  default     = "arn:aws:iam::891377014465:role/kobs35"
+}
+
+variable "cluster_name" {
+  type    = string
+  default = "ust-cluster"
+}
+
+
+variable "env_name" {
+  type    = string
+  default = "dev"
 }
