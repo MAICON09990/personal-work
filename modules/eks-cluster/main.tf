@@ -112,3 +112,18 @@ resource "kubernetes_namespace" "production" {
     name = "production"
   }
 }
+
+
+resource "kubernetes_namespace" "argo_cd" {
+  metadata {
+    annotations = {
+      name = "argo_cd"
+    }
+
+    labels = {
+      app = "webapp"
+    }
+
+    name = "argo_cd"
+  }
+}
