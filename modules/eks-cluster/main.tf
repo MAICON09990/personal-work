@@ -114,16 +114,16 @@ resource "kubernetes_namespace" "production" {
 }
 
 
-resource "kubernetes_namespace" "argo_cd" {
+resource "kubernetes_namespace" "argo-cd" {
   metadata {
     annotations = {
-      name = "argo_cd"
+      name = "argo-cd"
     }
 
     labels = {
       app = "webapp"
     }
 
-    name = "argo_cd"
+    name = "argo-cd"
   }
 }
